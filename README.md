@@ -1,4 +1,6 @@
-# Problem testing a route with a loading state
+## Problem testing a route with a loading state
+
+This repository (probably) recreates a problem I've run into testing a route that passes through the loading sub-route, before completing its transition.
 
 I have taken ember app kit and modified `routes/index.js` so that the model hook returns a promise, that resolves after 100ms:
 
@@ -14,5 +16,5 @@ export default Ember.Route.extend({
   }
 });
 ```
-This causes the tests to hang on the index acceptance test.
+This causes the tests to hang on the index acceptance test. Why is this?
 
